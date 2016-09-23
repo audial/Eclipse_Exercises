@@ -1,0 +1,41 @@
+
+public class Shapes {
+
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        Triangle t = new Triangle();
+        Square s = new Square();
+        System.out.println(t.findT()+s.findS()+c.findC());
+    }
+
+}
+
+class Triangle extends Shapes {
+
+    double findT() {
+        int height = 2;
+        int base = 2;
+        double AreaOfTriangle = (height * base) / 2;
+        return AreaOfTriangle;
+    }
+
+}
+
+class Square extends Shapes {
+
+    double findS() {
+        int length = 2;
+        double AreaOfSquare = Math.pow(length, 2);
+        return AreaOfSquare;
+    }
+
+}
+
+class Circle extends Shapes {
+
+    double findC() {
+        int radius = 2;
+        double AreaOfCircle = Math.PI * (Math.pow(radius, 2));
+        return AreaOfCircle;
+    }
+}
